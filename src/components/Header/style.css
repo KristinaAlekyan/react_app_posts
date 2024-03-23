@@ -1,0 +1,145 @@
+.topHeader {
+  padding: 1.8rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid #E9E9E9;
+}
+
+.mobileBurgerMenu {
+  display: none;
+}
+
+@media only screen and (max-width: 639px) {
+  .mobileBurgerMenu {
+    display: inline;
+  }
+
+  .stickyHeader {
+    visibility: hidden;
+  }
+
+  .topHeader {
+    padding: 1.8rem 1rem;
+    justify-content: space-between;
+  }
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.search-container input {
+  width: 10vw;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 2px 2px 3px grey, -2px -2px 3px grey;
+  outline: none;
+}
+
+.logo {
+  width: 180px;
+  height: 27px;
+}
+
+.stickyHeader {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border-bottom: 1px solid #E9E9E9;
+  background-color: white;
+  transition: transform 0.5s ease-in;
+}
+
+.stickyHeader.hidden {
+  transform: translateY(-100%);
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+}
+
+.menu_item {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: capitalize;
+  display: inline-block;
+  position: relative;
+}
+
+.menu_item>a {
+  display: flex;
+  align-items: center;
+}
+
+.submenu_item {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.813rem;
+  color: #000000;
+  list-style: none;
+  border-bottom: 1px solid #E9E9E9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.submenu_item:last-child {
+  border-bottom: none;
+}
+
+.submenu_item a {
+  padding: 0.5rem 0;
+  transition: all 0.2s ease-in;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 11rem;
+  background-color: #fff;
+  border: 1px solid #E9E9E9;
+  z-index: 1;
+  padding: 1.25rem;
+}
+
+.menu_item:hover .submenu {
+  display: block;
+}
+
+.submenu_item .icon-arrow {
+  transform: rotate(-45deg) !important;
+}
+
+.submenu_item:hover .submenu_link {
+  padding-left: 0.5rem;
+  color: #969696;
+}
+
+.icon-arrow {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000000;
+  transform: rotate(45deg);
+  margin: 0 0.3rem;
+}
