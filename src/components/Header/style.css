@@ -3,35 +3,17 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: relative;
   border-bottom: 1px solid #E9E9E9;
 }
 
 .mobileBurgerMenu {
-  display: none;
-}
-
-@media only screen and (max-width: 639px) {
-  .mobileBurgerMenu {
-    display: inline;
-  }
-
-  .stickyHeader {
-    visibility: hidden;
-  }
-
-  .topHeader {
-    padding: 1.8rem 1rem;
-    justify-content: space-between;
-  }
+  visibility: hidden;
 }
 
 .search-container {
   display: flex;
   align-items: center;
   gap: 10px;
-  position: absolute;
-  right: 1rem;
   cursor: pointer;
 }
 
@@ -142,4 +124,20 @@
   border-right: 1px solid #000000;
   transform: rotate(45deg);
   margin: 0 0.3rem;
+}
+@media only screen and (max-width: 639px) {
+  .topHeader {
+    padding: 1.8rem 1rem;
+    justify-content: space-between;
+  }
+  
+  .mobileBurgerMenu {
+    visibility: visible
+  }
+
+  .stickyHeader {
+    visibility: hidden;
+  }
+
+  
 }
